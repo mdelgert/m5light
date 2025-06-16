@@ -20,7 +20,8 @@
 	},
 	"forwardPorts": [8008],
 	"mounts": [
-		"source=/dev/,target=/dev/,type=bind,consistency=consistent"
+		"source=/dev/,target=/dev/,type=bind,consistency=consistent",
+		"source=${env:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
 	],
 	"runArgs": [
 		"--privileged"
