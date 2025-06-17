@@ -6,7 +6,8 @@ RUN sudo apt-get update \
  && sudo apt-get -y install --no-install-recommends \
       clang \
       python3-venv \
-      udev
+      udev \
+      git
 
 ## Set up udev rules for PlatformIO
 RUN curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
