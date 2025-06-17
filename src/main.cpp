@@ -5,7 +5,7 @@ void setup() {
     M5.begin(true, false, true); // Serial, I2C, Display (LED)
     delay(50);                  // Small delay to stabilize
     M5.dis.clear();             // Clear the LED
-    pinMode(26, INPUT);  // Set pin 26 as input mode.  设置引脚26为输入模式
+    pinMode(26, INPUT);         // Set pin 26 as input mode.
 }
 
 void loop() {
@@ -16,9 +16,8 @@ void loop() {
     //Serial.println("Blinking LED");
 
     static uint16_t digitalRead_value = 0, analogRead_value = 0;
-    analogRead_value = analogRead(36);    // Store the analog quantity read from
-                                          // pin 36. 将36号引脚读取到的模拟量存储
-    digitalRead_value = digitalRead(26);  // Store the number read from pin 26. 将26号引脚读取到的数字量存储
+    analogRead_value = analogRead(32);    // Store the analog quantity read from
+    digitalRead_value = digitalRead(26);  // Store the number read from pin 26.
 
     // Print the values to the serial monitor
     Serial.print("Analog Read Value: ");
